@@ -1,0 +1,95 @@
+
+{
+    "fullscreen": true,
+    "fps": 60,
+    "win size": [1920, 1080],
+    "font file name": "FFFFORWA.TTF",
+
+    "tile size": 180,
+    "grid color": [0,0,50],
+
+    "screenshot file name": "screenshots/{}_{}.png",
+    "screenshot key": "F2",
+
+    "map radius": 1000,
+    "border color": [0,255,0],
+
+    "gen worm props": {
+        "rot speed": 240,
+        "part rad": 20,
+        "move speed": 200,
+        "def parts": 3,
+        "max parts": 100
+    },
+
+    "food spawn time": 1,
+    "food color": [0, 200, 0],
+    "food rad": 5,
+    "foods": 80,
+
+    "gui colors": {
+        "background": [0,0,50],
+        "text": [255,255,255],
+        "button": [
+            [0,0,200],
+            [30,30,210]
+        ]
+    },
+
+    "worm controls": [
+        {
+            "left": "a",
+            "right": "d"
+        },
+        {
+            "left": "LEFT",
+            "right": "RIGHT"
+        }
+    ],
+
+    "players": ["Kristof", "Encsi"],
+
+    "worm configs": [
+        {
+            "name": "Anna",
+            "colors": [[255,0,0]]
+        },
+        {
+            "name": "Encsi",
+            "colors": [[200, 200, 0]]
+        },
+        {
+            "name": "Kristof",
+            "colors": [
+                [0, 0, 70],
+                [0, 0, 80]
+            ]
+        },
+        {
+            "name": "Kristof2",
+            "colors": [
+                [70, 0, 0],
+                [80, 0, 0]
+            ]
+        },
+        {
+            "name": "Magyar zászló",
+            "colors": [
+                [200, 0, 0],
+                [200, 200, 200],
+                [0, 200, 0]
+            ]
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
