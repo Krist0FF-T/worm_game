@@ -1,4 +1,3 @@
-
 import pygame as pg
 import random
 
@@ -8,10 +7,10 @@ import random
 # fonts = {}
 
 # def get_font(size: int, fname: str):
-    
+
 #     if not fname in fonts:
 #         fonts[fname] = {}
-    
+
 #     if not size in fonts[fname]:
 #         fonts[fname][size] = pg.font.Font(fname, size)
 

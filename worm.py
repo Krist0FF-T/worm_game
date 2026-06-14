@@ -1,4 +1,3 @@
-
 import pygame as pg
 import math
 
@@ -82,5 +81,6 @@ class Worm:
             part = other.parts[i]
             if utils.get_dist(head, part) < self.gen_props["part rad"]*2:
                 return True
-        
+
         return False
+

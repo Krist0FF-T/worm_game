@@ -1,4 +1,3 @@
-
 import json, sys, os, math, random
 import pygame as pg
 from datetime import datetime, timedelta
@@ -25,7 +24,7 @@ class Game:
         self.win_size = self.config["win size"]
         self.win_center = [self.win_size[i]//2 for i in range(2)]
         self.scale = self.win_size[1]/self.def_win_size[1]
-        
+
         self.screenshot_key = eval("pg.K_"+self.config["screenshot key"])
 
         pg.font.init()
@@ -123,7 +122,7 @@ class Game:
             for ev in events:
                 if ev.type == pg.QUIT:
                     self.close()
-                
+
                 if ev.type == pg.KEYDOWN:
 
                     if ev.key == self.screenshot_key:
@@ -131,7 +130,7 @@ class Game:
 
                     elif ev.key == pg.K_r:
                         self.restart_game()
-            
+
             keys = pg.key.get_pressed()
 
             # update worms
@@ -165,10 +164,10 @@ class Game:
                     if dist < w.gen_props["part rad"]-self.config["food rad"] and f in self.foods:
                         self.foods.remove(f)
                         w.add_part()
-                    
+
                     elif dist < self.gen_worm_props["part rad"]*3:
                         diff_vec = utils.list_el_sub(w.parts[0], f)
-                        
+
                         for i in range(2):
                             mult = 1/dist**2
                             f[i] += diff_vec[i]/dist * mult * dt * w.gen_props["part rad"] * (0b1 << 13)
@@ -300,10 +299,10 @@ class Game:
             pg.display.update()
 
     def get_font(self, size: int) -> pg.font.Font:
-        
+
         if size not in self.fonts:
             self.fonts[size] = pg.font.Font(self.config["font file name"], size)
-        
+
         return self.fonts[size]
 
     def draw_button(self, size, pos, centered: bool, text: str, events) -> bool:
@@ -342,7 +341,7 @@ class Game:
                     break
 
         return (click and hover)
-    
+
     def screenshot(self):
         img = self.screen.copy()
 
@@ -365,7 +364,7 @@ class Game:
             text = "{}: {}".format(key, val)
 
             utils.draw_text(img, text, font, (255,)*3, pos, False)
-        
+
         fname = ""
         f_ind = 0
 
@@ -405,7 +404,7 @@ class Game:
                 if self.draw_button(button_size, pos, True, buttons_texts[i], events):
                     if i == 0:
                         mm = False
-                    
+
                     elif i == 1:
                         self.close()
 
@@ -416,15 +415,14 @@ class Game:
             pg.display.update()
 
             for ev in events:
-                
+
                 if ev.type == pg.QUIT:
                     self.close()
-                
+
                 elif ev.type == pg.KEYDOWN:
                     if ev.key == pg.K_RETURN:
                         mm = False
-                    
+
                     elif ev.key == self.screenshot_key:
                         self.screenshot()
 
-        
